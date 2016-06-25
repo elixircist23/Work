@@ -8,7 +8,8 @@ class DBUtil:
         self.c = self.conn.cursor()
         self.path = Path
         self.table = Table
-        
+
+    #add column list?    
     def insert(self, Name, Age, Club):
         self.c.execute("INSERT INTO %s (name, age, club) VALUES ('%s', '%s', '%s');"
                        % (self.table, Name, Age, Club))
