@@ -15,6 +15,10 @@ class DBUtil:
         self.conn.commit();
 
     def query(self, columnList):
+        if type(columnList) != list:
+            print('columnList parameter needs to be a list')
+            return
+        
         columnString = ''
         for i in columnList:
             columnString = columnString + i + ','
@@ -29,10 +33,6 @@ class DBUtil:
         self.c.execute("UPDATE %s SET %s = '%s' WHERE %s = '%s';"
                        % (self.table, setColumn, setValue, whereColumn, whereValue))
 
-    
-        
-
-    
 
     
 
