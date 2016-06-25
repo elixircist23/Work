@@ -6,12 +6,13 @@ def main():
 	c = conn.cursor()
 	
 	c.execute('''CREATE TABLE roster
-				 (
-				  id 	INTEGER PRIMARY KEY NOT NULL,
-				  name 	TEXT, 
-				  age 	INTEGER, 
-				  club 	TEXT
-				  )''')
+			(
+				id 	INTEGER PRIMARY KEY NOT NULL,
+				name 	TEXT, 
+				age 	INTEGER, 
+				club 	TEXT
+			)
+		''')
 	
 	conn.commit()
 	conn.close()
