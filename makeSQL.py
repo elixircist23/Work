@@ -12,7 +12,7 @@ def main():
 				age 	INTEGER, 
 				club 	TEXT
 			)
-		''')
+		  ''')
 	
 	conn.commit()
 	conn.close()
