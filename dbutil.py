@@ -25,6 +25,7 @@ class DBUtil:
             columnString = columnString + i + ','
         #take out the last comma
         columnString = columnString[:-1]
+	
         self.conn.commit();
 
         return self.c.execute('SELECT %s FROM %s;' % (columnString, self.table))
@@ -34,7 +35,8 @@ class DBUtil:
         self.c.execute("UPDATE %s SET %s = '%s' WHERE %s = '%s';"
                        % (self.table, setColumn, setValue, whereColumn, whereValue))
 
-
+    def delete(self, column, value):
+	    self.c.execute("DELETE FROM %s WHERE %s = '%s';" % (self.table, column, value))
     
 
         
