@@ -3,11 +3,12 @@ import sqlite3
 class DBUtil:
     
     #need to add mysql support
-    def __init__(self, Path, Table):
+    def __init__(self, Path):
         self.conn = sqlite3.connect(Path)
         self.c = self.conn.cursor()
+	self.conn.text_factory = str
         self.path = Path
-        self.table = Table
+        self.table = 'roster'
 
     #add column list?    
     def insert(self, Name, Age, Club):
