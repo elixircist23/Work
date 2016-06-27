@@ -18,6 +18,7 @@ parser.add_argument('-column', help = 'used in delete arg')
 parser.add_argument('-value', help = 'used in delete arg')
 
 parser.add_argument('-columnList', help = 'used in query arg (use wildcard in quotes)', nargs = '*');
+
 parser.add_argument('-name', help = 'used in insert arg')
 parser.add_argument('-age', type = int, help = 'used in insert arg')
 parser.add_argument('-club', help = 'used in insert arg')
